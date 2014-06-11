@@ -64,10 +64,7 @@ var ThumbnailViewOne = Backbone.View.extend({
     }
   },
 
-  //showDetailView: function(){
-    //var detail = new DetailView({model: this.model});
-    //$('.modelcage1').append(detail);
-  //},
+  
 });
 
 //VIEW ONE ABOVE THIS LINE///////////////////////////////////////////////////////////////////////////////////////
@@ -133,49 +130,27 @@ var ThumbnailViewThree = Backbone.View.extend({
 var AppView = Backbone.View.extend({
 
   initialize: function(){
-    this.listenTo(coolPhotos, 'add', function(photo){
-      new ThumbnailViewOne({model: photo});
+    var coolPhotos = new PhotoCollectionOne();
+    var coolerPhotos = new PhotoCollectionTwo();
+    var coolestPhotos = new PhotoCollectionThree();
+
+    coolPhotos.fetch();
+    coolerPhotos.fetch();
+    coolestPhotos.fetch();
+
+    this.listenTo(coolPhotos, 'add', function(photo1){
+      new ThumbnailViewOne({model: photo1});
     });
-  }
+    this.listenTo(coolerPhotos, 'add', function(photo2){
+      new ThumbnailViewTwo({model: photo2});
+    });
+    this.listenTo(coolestPhotos, 'add', function(photo3){
+      new ThumbnailViewThree({model: photo3})
+    });
+  },
 });
 
-var coolPhotos = new PhotoCollectionOne();
-
-var app = new AppView();
-
-coolPhotos.fetch();
+new AppView();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var AppView2 = Backbone.View.extend({
-
-  initialize: function(){
-    this.listenTo(coolerPhotos, 'add', function(photo){
-      new ThumbnailViewTwo({model: photo});
-
-    });
-  }
-});
-
-var coolerPhotos = new PhotoCollectionTwo();
-
-var apps = new AppView2();
-
-coolerPhotos.fetch();
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-var AppView3 = Backbone.View.extend({
-
-  initialize: function(){
-    this.listenTo(coolestPhotos, 'add', function(photo){
-      new ThumbnailViewThree({model: photo});
-    });
-  }
-});
-
-var coolestPhotos = new PhotoCollectionThree();
-
-var app3 = new AppView3();
-
-coolestPhotos.fetch();
