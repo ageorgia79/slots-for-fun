@@ -34,8 +34,7 @@ body {
 }
 
 .container {
-    margin: 0 auto;
-    width: 100%;
+    width: 90%;
     height: 1000px;
 
 }
@@ -45,23 +44,27 @@ body {
     bottom: 16px;
     background-color: white;
     width: 240px;
-    height: 380px;
-    border: 10px solid #000033;
+    height: 405px;
+    border: 6px solid #000033;
     float: left;
     display: inline-block;
     padding-right: 10px;
     padding-left: 10px;
     margin-left: 162px;
     margin-right: 40px;
-    margin-top: 50px;
-    border-radius: 25px;
+    margin-top: 40px;
+    border-top-left-radius: 100%50px;
+    border-top-right-radius: 100%50px;
+    border-bottom-left-radius: 100%50px;
+    border-bottom-right-radius: 100%50px;
     overflow: scroll;
-    box-shadow: 2px 2px 40px red;
+    box-shadow: inset 0px 20px 10px -14px gray,
+                inset 0px -20px 10px -14px gray;
     img {
-        margin-left: 90px;
-        margin-top: 25px;
+        margin-left: 45px;
+        margin-top: 110px;
         border: 2px solid black;
-        box-shadow: 5px 5px 60px black;
+        
     }
 
 
@@ -74,22 +77,26 @@ body {
     bottom: 16px;
     background-color: white;
     width: 240px;
-    height: 380px;
-    border: 10px solid #000033;
+    height: 405px;
+    border: 6px solid #000033;
     display: inline-block;
     padding-right: 10px;
     padding-left: 10px;
     margin-right: 35px;
-    margin-left: 31px;
-    margin-top: 50px;
-    border-radius: 25px;
+    margin-left: 44px;
+    margin-top: 40px;
+    border-top-left-radius: 100%50px;
+    border-top-right-radius: 100%50px;
+    border-bottom-left-radius: 100%50px;
+    border-bottom-right-radius: 100%50px;
     overflow: scroll;
-    box-shadow: 2px 2px 40px red;
+    box-shadow: inset 0px 20px 10px -14px gray,
+                inset 0px -20px 10px -14px gray;
     img {
-        margin-left: 90px;
-        margin-top: 25px;
+        margin-left: 45px;
+        margin-top: 110px;
         border: 2px solid black;
-        box-shadow: 5px 5px 60px black;
+        
     }
 
 }
@@ -99,44 +106,50 @@ body {
     bottom: 16px;
     background-color: white;
     width: 240px;
-    height: 380px;
-    border: 10px solid #000033;
+    height: 405px;
+    border: 6px solid #000033;
     display: inline-block;
     padding-right: 10px;
     padding-left: 10px;
-    margin-top: 50px;
-    margin-left: 35px;
-    border-radius: 25px;
+    margin-top: 40px;
+    margin-left: 42px;
+    border-top-left-radius: 100%50px;
+    border-top-right-radius: 100%50px;
+    border-bottom-left-radius: 100%50px;
+    border-bottom-right-radius: 100%50px;
     overflow: scroll;
-    box-shadow: 2px 2px 40px red;
+    box-shadow: inset 0px 20px 10px -14px gray,
+                inset 0px -20px 10px -14px gray;
     img {
-        margin-left: 90px;
-        margin-top: 25px;
+        margin-left: 45px;
+        margin-top: 110px;
         border: 2px solid black;
-        box-shadow: 5px 5px 60px black;
+        
     }
 
 }
 
 .movebutton1 {
     height: 30px;
-    width: 80px;
+    width: 65px;
     background: #660000;
     color: white;
     border: 1px solid black;
     text-align: center;
     position: relative;
     bottom: 150px;
-    margin-left: 0px;
+    margin-left: 15px;
     cursor: pointer;
-    box-shadow: 5px 5px 20px black;
+    //box-shadow: 5px 5px 20px black;
     border-radius: 6px;
+    display: inline-block;
+    top: 20px;
 
 }
 
 .movebutton2 {
     height: 30px;
-    width: 80px;
+    width: 65px;
     background: #660000;
     color: white;
     border: 1px solid black;
@@ -145,28 +158,32 @@ body {
     bottom: 130px;
     margin-left: 0px;
     cursor: pointer;
-    box-shadow: 5px 5px 20px black;
+    //box-shadow: 5px 5px 20px black;
     border-radius: 6px;
+    display: inline-block;
+    top: 20px;
 }
 
 .movebutton3 {
     height: 30px;
-    width: 80px;
+    width: 65px;
     background: #660000;
     color: white;
     border: 1px solid black;
     text-align: center;
     position: relative;
     bottom: 150px;
-    margin-left: 0px;
+    margin-left: 15px;
     cursor: pointer;
-    box-shadow: 5px 5px 20px black;
+    //box-shadow: 5px 5px 20px black;
     border-radius: 6px;
+    display: inline-block;
+    top: 20px;
 }
 
 .movebutton4 {
     height: 30px;
-    width: 80px;
+    width: 65px;
     background: #660000;
     color: white;
     border: 1px solid black;
@@ -175,28 +192,32 @@ body {
     bottom: 130px;
     margin-left: 0px;
     cursor: pointer;
-    box-shadow: 5px 5px 20px black;
+    //box-shadow: 5px 5px 20px black;
     border-radius: 6px;
+    display: inline-block;
+    top: 20px;
 }
 
 .movebutton5 {
     height: 30px;
-    width: 80px;
+    width: 65px;
     background: #660000;
     color: white;
     border: 1px solid black;
     text-align: center;
     position: relative;
     bottom: 150px;
-    margin-left: 0px;
+    margin-left: 15px;
     cursor: pointer;
-    box-shadow: 5px 5px 20px black;
+    //box-shadow: 5px 5px 20px black;
     border-radius: 6px;
+    display: inline-block;
+    top: 20px;
 }
 
 .movebutton6 {
     height: 30px;
-    width: 80px;
+    width: 65px;
     background: #660000;
     color: white;
     border: 1px solid black;
@@ -205,13 +226,15 @@ body {
     bottom: 130px;
     margin-left: 0px;
     cursor: pointer;
-    box-shadow: 5px 5px 20px black;
+    //box-shadow: 5px 5px 20px black;
     border-radius: 6px;
+    display: inline-block;
+    top: 20px;
 }
 
 .savebutton1 {
     height: 30px;
-    width: 80px;
+    width: 65px;
     background: #660000;
     color: white;
     border: 1px solid black;
@@ -220,13 +243,15 @@ body {
     bottom: 110px;
     margin-left: 0px;
     cursor: pointer;
-    box-shadow: 5px 5px 20px black;
+    //box-shadow: 5px 5px 20px black;
     border-radius: 6px;
+    display: inline-block;
+    top: 20px;
 }
 
 .savebutton2 {
     height: 30px;
-    width: 80px;
+    width: 65px;
     background: #660000;
     color: white;
     border: 1px solid black;
@@ -235,13 +260,15 @@ body {
     bottom: 110px;
     margin-left: 0px;
     cursor: pointer;
-    box-shadow: 5px 5px 20px black;
+    //box-shadow: 5px 5px 20px black;
     border-radius: 6px;
+    display: inline-block;
+    top: 20px;
 }
 
 .deletebutton1 {
     height: 30px;
-    width: 80px;
+    width: 65px;
     background: #660000;
     color: white;
     border: 1px solid black;
@@ -250,6 +277,8 @@ body {
     bottom: 110px;
     margin-left: 0px;
     cursor: pointer;
-    box-shadow: 5px 5px 20px black;
+    //box-shadow: 5px 5px 20px black;
     border-radius: 6px;
+    display: inline-block;
+    top: 20px;
 }

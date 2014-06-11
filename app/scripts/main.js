@@ -53,6 +53,7 @@ var ThumbnailViewOne = Backbone.View.extend({
   },
 
   initialize: function(){
+    this.listenTo(this.model, 'destroy', this.remove);
     $('.modelcage1').append(this.el);
     this.render();
   },
@@ -64,8 +65,32 @@ var ThumbnailViewOne = Backbone.View.extend({
     }
   },
 
+  jump1: function(){
+    $.post('http://tiny-pizza-server.herokuapp.com/collections/georgiasphotos', {
+        url: this.model.attributes.url,
+    });
+    this.model.destroy().done(function(){
+      $('.modelcage2').html('');
+      $('.modelcage2').append('');
+      var app = new AppView();
+
+    })
+  },
+
+  jump2: function(){
+    $.post('http://tiny-pizza-server.herokuapp.com/collections/moregeorgiasphotos', {
+      url: this.model.attributes.url,
+    });
+    this.model.destroy().done(function(){
+      $('.modelcage3').html('');
+      $('.modelcage3').append('');
+      var app = new AppView();
+    })
+  },
+
   
 });
+
 
 //VIEW ONE ABOVE THIS LINE///////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -84,6 +109,7 @@ var ThumbnailViewTwo = Backbone.View.extend({
   },
 
   initialize: function(){
+    this.listenTo(this.model, 'destroy', this.remove);
     $('.modelcage2').append(this.el);
     this.render();
   },
@@ -93,6 +119,28 @@ var ThumbnailViewTwo = Backbone.View.extend({
       var renderedTemplate = this.thumbnailTemplate2(this.model.attributes);
       this.$el.html(renderedTemplate);
     }
+  },
+
+  jump3: function(){
+    $.post('http://tiny-pizza-server.herokuapp.com/collections/moregeorgiasphotos', {
+      url: this.model.attributes.url,
+    });
+    this.model.destroy().done(function(){
+      $('.modelcage3').html('');
+      $('.modelcage3').append('');
+      var app = new AppView();
+    })
+  },
+
+  jump4: function(){
+    $.post('http://tiny-pizza-server.herokuapp.com/collections/georgiasphoto', {
+      url: this.model.attributes.url,
+    });
+    this.model.destroy().done(function(){
+      $('.modelcage1').html('');
+      $('.modelcage1').append('');
+      var app = new AppView();
+    })
   },
 });
 
@@ -112,6 +160,7 @@ var ThumbnailViewThree = Backbone.View.extend({
   },
 
   initialize: function(){
+    this.listenTo(this.model, 'destroy', this.remove);
     $('.modelcage3').append(this.el);
     this.render();
   },
@@ -121,6 +170,28 @@ var ThumbnailViewThree = Backbone.View.extend({
       var renderedTemplate = this.thumbnailTemplate3(this.model.attributes);
       this.$el.html(renderedTemplate);
     }
+  },
+
+  jump5: function(){
+    $.post('http://tiny-pizza-server.herokuapp.com/collections/georgiasphotos', {
+      url: this.model.attributes.url,
+    });
+    this.model.destroy().done(function(){
+      $('.modelcage2').html('');
+      $('.modelcage2').append('');
+      var app = new AppView();
+    })
+  },
+
+  jump6: function(){
+    $.post('http://tiny-pizza-server.herokuapp.com/collections/georgiasphoto', {
+      url: this.model.attributes.url,
+    });
+    this.model.destroy().done(function(){
+      $('.modelcage1').html('');
+      $('.modelcage1').append('');
+      var app = new AppView();
+    })
   },
 });
 
