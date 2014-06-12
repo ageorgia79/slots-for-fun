@@ -48,7 +48,7 @@ var ThumbnailViewOne = Backbone.View.extend({
 
     'click .movebutton1': 'jump1',
     'click .movebutton2': 'jump2',
-    'click .deletebutton1': 'destroy',
+    'click .deletebutton1': 'delete',
 
   },
 
