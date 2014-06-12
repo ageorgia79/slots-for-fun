@@ -48,7 +48,7 @@ var ThumbnailViewOne = Backbone.View.extend({
 
     'click .movebutton1': 'jump1',
     'click .movebutton2': 'jump2',
-    'click .deletebutton1': 'delete',
+    'click .deletebutton1': 'destroy',
 
   },
 
@@ -87,6 +87,10 @@ var ThumbnailViewOne = Backbone.View.extend({
       var app = new AppView();
     })
   },
+
+  destroy: function(){
+    this.model.destroy();
+  }
 
   
 });
